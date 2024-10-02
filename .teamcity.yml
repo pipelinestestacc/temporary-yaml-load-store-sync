@@ -17,7 +17,6 @@ jobs:
       - type: script
         script-content: echo "Test B" >> test-b.txt
         name: Job B - Stash Test File
-
   JobC:
     name: Job C
     runs-on: Ubuntu-22.04-Small
@@ -31,6 +30,3 @@ jobs:
       - Job1:
           files:
             - '*'
-      - JobB:
-          files:
-            - '*.txt'
